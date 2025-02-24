@@ -8,8 +8,8 @@ This project detects underwater plastic pollution using a trained YOLO model. It
 - Displays processed images and videos with bounding boxes.
 - Responsive web interface built with Flask.
 
-## Demo Video
-- 
+## Demo
+[Watch the demo video here](https://drive.google.com/file/d/1FxZFz77gsZgIwOJT36P-w5h7cV84V60u/view?usp=sharing)
 
 ## Installation
 
@@ -100,4 +100,3 @@ UnderwaterPlasticDetection/
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss the proposed changes.
-
