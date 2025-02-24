@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Center inline content */
+}
+
+/* Title Styling */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 auto 30px;  /* Top & bottom margin, auto side margins */
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Body Styling */
+.body23 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Title Styling */
+.main-title123 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;  /* Center the container horizontally */
+}
+
+
+/* Left Section (Upload Forms) */
+.upload-section {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* Soft green shadow */
+}
+
+/* Right Section (Processed Image/Video) */
+.processed-section {
+    width: 50%;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+/* Input Styling */
+input[type="file"] {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Green Button */
+button {
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Processed Image */
+.processed-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.processed-image:hover {
+    transform: scale(1.05);
+}
+
+/* Processed Video */
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upload-section, .processed-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .processed-image, video {
+        max-width: 100%;
+    }
+}
