@@ -13,7 +13,7 @@ app.config['ALLOWED_IMAGE_EXTENSIONS'] = {'png', 'jpg', 'jpeg', 'gif'}
 app.config['ALLOWED_VIDEO_EXTENSIONS'] = {'mp4', 'avi', 'mov', 'mkv'}
 
 # Load your trained YOLO model
-model = YOLO("/home/duy-ho-black/Downloads/archive/OceanPollution/runs/detect/train5/weights/best.pt")
+model = YOLO("model/weights/best.pt")
 
 # Ensure uploads and static directories exist
 os.makedirs("uploads", exist_ok=True)
