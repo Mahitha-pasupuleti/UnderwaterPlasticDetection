@@ -1,101 +1,104 @@
-Underwater Plastic Detection
+# Underwater Plastic Detection
 
-This project is an end-to-end implementation of an object detection model using YOLO to detect various types of underwater plastic pollution in images and videos. The model has been trained on a custom dataset and can be used to analyze oceanic environments for pollution detection.
+This project detects underwater plastic pollution using a trained YOLO model. It allows users to upload images or videos and processes them to identify plastic waste in aquatic environments.
 
-Features
+## Features
+- Upload images or videos for real-time detection.
+- Uses a YOLO model for accurate object detection.
+- Displays processed images and videos with bounding boxes.
+- Responsive web interface built with Flask.
 
-Upload an image or video for plastic pollution detection
+## Installation
 
-Process and display detected objects in real-time
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- Conda (Optional but recommended)
 
-Responsive web interface for ease of use
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/UnderwaterPlasticDetection.git
+   cd UnderwaterPlasticDetection
+   ```
 
-Folder Structure
+2. Create a virtual environment (optional but recommended):
+   ```bash
+   conda create --name underwater_detection python=3.8 -y
+   conda activate underwater_detection
+   ```
+   or using `venv`:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   ```
 
-underwater-plastic-detection/
-├── app.py                 # Main application script
-├── model/                 # Folder containing trained YOLO model weights
-│   └── best.pt            # Trained YOLO model file
-├── requirements.txt       # Dependencies for the project
-├── static/                # Static files like CSS and JavaScript
-│   └── css/
-│       └── styles.css
-├── templates/             # HTML templates for the web interface
-│   └── index.html
-├── uploads/               # Folder for storing uploaded test images and videos
-│   ├── images/            # Uploaded images
-│   └── videos/            # Uploaded videos
-├── README.md              # Project documentation
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Installation and Setup
+4. Ensure the YOLO model is placed correctly inside the project directory:
+   ```
+   ├── static/
+   ├── templates/
+   ├── uploads/  # Stores uploaded test images/videos
+   ├── models/
+       ├── best.pt  # Your trained YOLO model
+   ├── app.py  # Flask backend
+   ├── requirements.txt
+   ├── README.md
+   ```
 
-Prerequisites
+5. Run the Flask application:
+   ```bash
+   python app.py
+   ```
 
-Ensure you have Python installed (recommended: Python 3.8 or later). Install Conda if using a virtual environment.
+6. Open your browser and visit:
+   ```
+   http://127.0.0.1:5000/
+   ```
 
-Step 1: Clone the Repository
+## Usage
+- Click **Upload Image** or **Upload Video**.
+- The processed output will be displayed on the right.
+- Click **Download** to save the processed image/video.
 
-git clone https://github.com/your-repo/underwater-plastic-detection.git
-cd underwater-plastic-detection
+## Dependencies
+The project requires the following packages:
+```
+Flask
+opencv-python
+numpy
+ultralytics  # For YOLO
+```
 
-Step 2: Set Up a Virtual Environment (Recommended)
-
-Using Conda:
-
-conda create --name plastic-detection python=3.8 -y
-conda activate plastic-detection
-
-Or using venv:
-
-python -m venv env
-source env/bin/activate  # On Windows use: env\Scripts\activate
-
-Step 3: Install Dependencies
-
+You can install them using:
+```bash
 pip install -r requirements.txt
+```
 
-Step 4: Run the Application
+## Folder Structure
+```
+UnderwaterPlasticDetection/
+├── static/
+│   ├── css/
+│   │   ├── styles.css
+│   ├── uploads/
+├── templates/
+│   ├── index.html
+├── uploads/  # Stores uploaded test images/videos
+├── models/
+│   ├── best.pt  # Your trained YOLO model
+├── app.py  # Flask backend
+├── requirements.txt
+├── README.md
+```
 
-python app.py
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss the proposed changes.
 
-The application will start, and you can access it in your browser at http://127.0.0.1:5000/.
+## License
+MIT License
 
-Dependencies
-
-The project requires the following Python packages:
-
-Flask (for the web interface)
-
-OpenCV (for image and video processing)
-
-NumPy (for array processing)
-
-ultralytics (for YOLO object detection)
-
-To install all dependencies, simply run:
-
-pip install -r requirements.txt
-
-Usage
-
-Open the application in your browser.
-
-Upload an image or video for detection.
-
-View the processed output with detected plastic objects.
-
-Dataset and Model
-
-The model has been trained using a dataset containing 15 classes of underwater plastic waste. The trained YOLO model (best.pt) is stored in the model/ directory.
-
-Testing
-
-Test images and videos are stored in the uploads/ directory. You can use them to check the functionality of the model.
-
-Contributing
-
-Feel free to submit issues or contribute improvements via pull requests.
-
-License
-
-This project is open-source under the MIT License.
