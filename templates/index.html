@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Image and Video Detection</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Main Title -->
+    <h1 class="main-title">YOLO Image and Video Detection</h1>
+    <div class="container">
+        <!-- Left: Upload Section -->
+        <div class="upload-section">
+            <h2>Upload Image</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <button type="submit">Upload Image</button>
+            </form>
+
+            <h2>Upload Video</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="video" accept="video/*" required>
+                <button type="submit">Upload Video</button>
+            </form>
+        </div>
+
+        <!-- Right: Processed Output -->
+        <div class="processed-section">
+            {% if image_url %}
+                <h2>Processed Image</h2>
+                <img src="{{ image_url }}" class="processed-image" alt="Processed Image">
+            {% endif %}
+
+            {% if video_url %}
+                <h2>Processed Video</h2>
+                <video controls>
+                    <source src="{{ video_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
